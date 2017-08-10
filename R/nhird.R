@@ -1,6 +1,6 @@
 
 
-#' @import foreach iterators XML
+#' @import foreach iterators
 oneLineParser.cd <- function(schema_df, oneLine) {
   foreach(one_col = iter(schema_df,by = "row")) %do% substr(oneLine, one_col$StartIdx, one_col$EndIdx)
 }
